@@ -1,0 +1,55 @@
+body{
+    background-color: #EAF6F6;
+    margin: auto 0 0 0;
+    text-align: center;
+    font-family: 'Viaoda Libre', cursive
+}
+h1{ 
+     color: #66BFBF;
+    margin-top: 8px;
+    font-size: 4rem;
+    padding-top: 100px;
+    font-family: 'Dancing Script', cursive;
+}
+
+a{
+    color: #11999E;
+}
+.p1{margin-top: 4px;
+    font-size: 5rem;
+    font-weight: normal;
+}
+
+.btn {
+  background: #c71a22;
+  background-image: -webkit-linear-gradient(top, #c71a22, #520e42);
+  background-image: -moz-linear-gradient(top, #c71a22, #520e42);
+  background-image: -ms-linear-gradient(top, #c71a22, #520e42);
+  background-image: -o-linear-gradient(top, #c71a22, #520e42);
+  background-image: linear-gradient(to bottom, #c71a22, #520e42);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 1px 1px 3px #0f0d0f;
+  font-family: Arial;
+  color: #fcfcfc;
+  font-size: 60px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #297502;
+  background-image: -webkit-linear-gradient(top, #297502, #6ad64f);
+  background-image: -moz-linear-gradient(top, #297502, #6ad64f);
+  background-image: -ms-linear-gradient(top, #297502, #6ad64f);
+  background-image: -o-linear-gradient(top, #297502, #6ad64f);
+  background-image: linear-gradient(to bottom, #297502, #6ad64f);
+  text-decoration: none;
+}
+
+.succespayment{
+    font-size: 4rem;
+    margin-bottom: 50px;
+    padding-bottom: 5px;
+}

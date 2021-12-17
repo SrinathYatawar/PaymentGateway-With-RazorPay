@@ -1,0 +1,84 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Movies World</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+
+    
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    
+    <!-- Favicons -->
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  </head>
+  <body class="text-center">
+<main class="form-signin">
+
+  <form action="/" method="POST">
+    <div>
+      <p><strong>Hii, Welcome To Movies World Download You Favourite Movie Now!!</strong></p>
+    </div>
+
+    <img src="/image.jpeg" alt="" width="280" height="280">
+
+    <h1 class="h3 mb-3 fw-normal h1-color"><strong>1Rs Only/-</strong></h1>
+
+    <button class="w-100 btn btn-lg btn-warning margin-bottom" id="rzp-button1" type="submit">Pay Now</button>
+    <p class="mt-5 mb-3 text-muted">&copy; Movies World.</p>
+  </form>
+</main>
+
+<script>
+  axios.post("/order").then(function(info){
+    console.log(info);
+
+    var options = {
+    "key": "rzp_live_TkrHFCOiaTMMAp", // Enter the Key ID generated from the Dashboard
+    "name": "Movies World",
+    "description": "Download Movies Now!",
+    "image": "/name.jpg",
+    "order_id": info.data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "callback_url": "/completing-order",
+    };
+
+    var rzp1 = new Razorpay(options);
+document.getElementById("rzp-button1").onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}
+
+  })
+
+</script>
+    
+  </body>
+</html>
